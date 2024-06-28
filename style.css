@@ -1,0 +1,77 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-wrapper {
+    perspective: 1000px; /* Adds depth to the 3D effect */
+}
+
+.profile-container {
+    background-color: #f9f9f9; /* Off-white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly increased shadow for 3D effect */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.6s ease-in-out; /* Smooth transition */
+}
+
+.profile-container.pushed-back {
+    transform: translateZ(-100px) rotateY(20deg); /* 3D effect on click */
+}
+
+.profile-header {
+    background-color: #333333; /* Black header */
+    padding: 20px;
+    color: white;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #f8bd4d; /* Off-white border */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out; /* Smooth transition */
+}
+
+.profile-picture:active {
+    transform: scale(0.95); /* Slightly scale down on click */
+}
+
+.profile-name {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-username {
+    margin: 5px 0 20px;
+    font-size: 18px;
+    color: #b3b3b3; /* Light grey */
+}
+
+.profile-details {
+    padding: 20px;
+}
+
+.profile-email, .profile-internship {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.profile-internship a {
+    color: #333333; /* Black */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-internship a:hover {
+    text-decoration: underline;
+}
